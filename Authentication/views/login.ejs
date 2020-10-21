@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title> Login Form</title> 
+    <style type="text/css" media="screen"> 
+        body { 
+            background-color:lightgreen; 
+            text-decoration-color: white; 
+            font: size 1m;  
+        } 
+    </style>
+</head> 
+<body> 
+    <div class="container" > 
+        <div class="row"> 
+        <div class="col-md-3"> 
+        </div> 
+    <div class="col-md-6 main"> 
+        <% if (messages.error) { %>
+            <%= messages.error %>
+            <%} %>
+      <form action="/login" method="post"> 
+        <h1> Login form </h1> 
+        <label>E-Mail</label>
+         <input class="box" type="email" name="email" id="email" 
+            placeholder="E-Mail " required /><br>
+            <br> 
+            <label>Password</label>                  
+            <input class="box" type="password" name="password" 
+            id="password" placeholder="Password " required/>
+            <br> 
+            <input type="submit" id="submitDetails"  
+            name="submitDetails" value="Submit" /><br> 
+            <br>
+         </form> 
+            <a href="register">register</a>
+        </div> 
+    <div class="col-md-3"> 
+        </div> 
+                  
+    </div> 
+    </div> 
+</body> 
+</html>     
